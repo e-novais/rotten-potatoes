@@ -26,5 +26,5 @@ jobs:
          push: true
          tags: 
            erecnovais/rotten-potatos:latest
-           erecnovais/rotten-potatos:{{ $github.run_number }}
+           erecnovais/rotten-potatos:${{ github.run_number }}
           
