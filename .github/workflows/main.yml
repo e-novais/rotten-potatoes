@@ -24,7 +24,7 @@ jobs:
          context: ./src
          file: ./src/Dockerfile
          push: true
-         tags:
+         tags: |
             erecnovais/rotten-potatos:latest
             erecnovais/rotten-potatos:${{ github.run_number }}
           
