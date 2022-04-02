@@ -24,7 +24,7 @@ jobs:
          context: ./src
          file: ./src/Dockerfile
          push: true
-         tags: 
-           erecnovais/rotten-potatoes:latest
-           erecnovais/rotten-potatoes:${{ github.run_number }}
+         tags:
+            erecnovais/rotten-potatoes:latest
+            erecnovais/rotten-potatoes:${{ github.run_number }}
           
