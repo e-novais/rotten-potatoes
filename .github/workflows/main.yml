@@ -7,7 +7,7 @@ on:
     branches: [ main ]    
   workflow_dispatch:
 jobs:
-  build:
+  CI:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,4 +27,14 @@ jobs:
          tags: |
             erecnovais/rotten-potatos:latest
             erecnovais/rotten-potatos:${{ github.run_number }}
+  CD:
+      run-on: ubuntu-latest 
+      steps:
+          - uses: actions/checkout@v3
+        
+          - name: Kubernetes Set Context
+            uses: Azure/k8s-set-context@v2
+            with:
+              metod: kubeconfig
+              kubeconfig: ${{ secrets.KUBECONFIG }}
           
